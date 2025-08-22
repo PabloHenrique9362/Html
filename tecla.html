@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" onkeydown="Pressionatecla(event)" placeholder="Precione uma tecla">
+    <p id="tecla"></p>
+    <script>
+        function Pressionatecla(event){
+            document.getElementById("tecla").innerText = "tecla pressionada " + event.key;
+        }
+    </script>
+    <input type="text" onkeyup="teclasolta(event)" placeholder="Solte uma tecla">
+    <p id="teclas"></p>
+    <script>    
+        function teclasolta(event){
+            document.getElementById("teclas").innerText = "Tecla solta: " + event.key;
+        }
+    </script>
+</body>
+</html>
