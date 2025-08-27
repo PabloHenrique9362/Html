@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini Painel</title>
+  <style>
+    body {
+      text-align: center;
+      padding-top: 50px;
+    }
+
+    button {
+      padding: 15px 30px;
+      margin: 10px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <button style="background-color: gray; color: white;">Cinza</button>
+  <button style="background-color: green; color: white;">Verde</button>
+  <button style="background-color: red; color: white;">Vermelho</button>
+
+  <script>
+    document.querySelectorAll('button').forEach(botao => {
+      botao.addEventListener('click', () =>
+        document.body.style.background = botao.style.backgroundColor
+      );
+
+      botao.addEventListener('mouseenter', () =>
+        botao.style.border = '3px solid black'
+      );
+
+      botao.addEventListener('mouseleave', () =>
+        botao.style.border = 'none'
+      );
+    });
+  </script>
+</body>
+</html>
